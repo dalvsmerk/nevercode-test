@@ -2,6 +2,10 @@
 @import "signup/index.scss";
 @import "assets/fonts/index.scss";
 
+body {
+  overflow: hidden;
+}
+
 body,
 input,
 button {

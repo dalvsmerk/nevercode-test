@@ -10,11 +10,17 @@ function SignUpSidebar() {
 
   const handleSetSlide = i => () => setCurrentSlide(i);
 
-  const renderSlide = slide =>
-    <SignUpSidebarSlide slide={slide} currentSlide={currentSlide} />;
+  const renderSlide = (slide, i) => (
+    <SignUpSidebarSlide
+      key={`slide-${i}`}
+      slide={slide}
+      currentSlide={currentSlide}
+    />
+  );
 
   const renderControl = (_, i) =>
     <SlideControl
+      key={`slide-control-${i}`}
       index={i}
       currentSlide={currentSlide}
       onSetSlide={handleSetSlide}
