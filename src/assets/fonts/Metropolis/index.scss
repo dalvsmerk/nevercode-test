@@ -11,3 +11,10 @@
   src: url('./woff2/Metropolis-Bold.woff2') format('woff2'),
     url('./woff/Metropolis-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: Metropolis;
+  font-weight: 500;
+  src: url('./woff2/Metropolis-Medium.woff2') format('woff2'),
+    url('./woff/Metropolis-Medium.woff') format('woff');
+}

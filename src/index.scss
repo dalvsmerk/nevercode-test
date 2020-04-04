@@ -6,4 +6,8 @@ body,
 input,
 button {
   font-family: Metropolis, Helvetica, Arial, sans-serif;
+
+  &:focus {
+    outline-style: solid;
+  }
 }

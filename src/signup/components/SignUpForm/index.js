@@ -19,13 +19,13 @@ function SignUpForm({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault();
 
-    // TODO: validations
+    // TODO: validation
     onSubmit(email, password);
   };
 
   return (
     <form className="nc-signup-form" onSubmit={handleSubmit}>
-      <h2 className="nc-signup-form__title">Welcome</h2>
+      <h2 className="nc-signup-form__title">Welcome!</h2>
       <p className="nc-signup-form__subtitle">
         Sign up via form below or use one of our OAuth
         providers to create your account

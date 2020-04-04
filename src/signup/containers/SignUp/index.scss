@@ -1,1 +1,15 @@
-.nc-signup {}
+.nc-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $background-grey;
+
+  &__form {
+    width: 327px;
+    padding: 66px;
+    background: $white;
+    border-radius: 4px;
+    box-shadow: 0 0 14px 20px $shadow-grey;
+  }
+}
