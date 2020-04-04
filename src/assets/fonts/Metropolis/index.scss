@@ -1,20 +1,13 @@
 @font-face {
   font-family: Metropolis;
   font-weight: normal;
-  src: url('./woff2/Metropolis-Regular.woff2') format('woff2'),
-    url('./woff/Metropolis-Regular.woff') format('woff');
+  src: url('./woff2/Metropolis-Light.woff2') format('woff2'),
+    url('./woff/Metropolis-Light.woff') format('woff');
 }
 
 @font-face {
   font-family: Metropolis;
   font-weight: bold;
-  src: url('./woff2/Metropolis-Bold.woff2') format('woff2'),
-    url('./woff/Metropolis-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: Metropolis;
-  font-weight: 500;
   src: url('./woff2/Metropolis-Medium.woff2') format('woff2'),
     url('./woff/Metropolis-Medium.woff') format('woff');
 }

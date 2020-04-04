@@ -4,8 +4,8 @@ import { SignUpForm } from 'signup/components';
 
 function SignUpFormContainer() {
   return (
-    <div className="nc-signup">
-      <div className="nc-signup__form">
+    <div className="nc-signup-container">
+      <div className="nc-signup-container__form">
         <SignUpForm onSubmit={() => {}} />
       </div>
     </div>

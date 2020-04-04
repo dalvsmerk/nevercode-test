@@ -1,0 +1,27 @@
+.nc-signup-slide {
+  text-align: center;
+  min-width: 320px;
+  color: $white;
+  transition: transform 0.3s ease;
+
+  &__image {
+    text-align: center;
+    margin-bottom: 130px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

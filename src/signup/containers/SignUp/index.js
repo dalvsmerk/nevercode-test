@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { SignUpFormContainer } from 'signup/components';
+import { SignUpFormContainer, SignUpSidebar } from 'signup/components';
 
 export function SignUp() {
   return (
-    <>
+    <div className="nc-signup">
+      <SignUpSidebar />
       <SignUpFormContainer />
-    </>
+    </div>
   );
 }
