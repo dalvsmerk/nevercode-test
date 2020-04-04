@@ -32,7 +32,6 @@ function FormInput({
         onChange={onChange}
       />
       {message && <span className="nc-form-input__message">{message}</span>}
-      {/* TODO: validation */}
     </label>
   );
 }
