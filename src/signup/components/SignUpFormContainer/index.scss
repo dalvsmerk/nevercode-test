@@ -29,6 +29,10 @@
     height: 100%;
     position: absolute;
     z-index: 1;
+
+    @media screen and (max-device-width: 767px) {
+      display: none;
+    }
   }
 }
 
