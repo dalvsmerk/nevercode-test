@@ -7,11 +7,19 @@ const propTypes = {
   onSubmit: pt.func.isRequired,
 };
 
+const isEmpty = o => Object.keys(o).length === 0;
+
 const handleChange = handler => e => handler(e.target.value);
+
+const defaultErrors = { email: undefined, password: undefined };
+
+const emailValid = email => !!email && email.length > 0;
+const passwordValid = password => !!password && password.length >= 8;
 
 function SignUpForm({ onSubmit }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState(defaultErrors);
 
   const handleEmailChange = handleChange(setEmail);
   const handlePasswordChange = handleChange(setPassword);
@@ -19,7 +27,16 @@ function SignUpForm({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault();
 
-    // TODO: validation
+    const errors = {
+      email: !emailValid(email) ? 'Should not be empty' : undefined,
+      password: !passwordValid(password) ? 'At least 8 characters' : undefined,
+    };
+
+    if (!isEmpty(errors)) {
+      setErrors(errors);
+      return;
+    }
+
     onSubmit(email, password);
   };
 
@@ -36,15 +53,15 @@ function SignUpForm({ onSubmit }) {
         placeholder="Enter your email"
         value={email}
         onChange={handleEmailChange}
+        message={errors.email}
       />
       <FormInput
         type="password"
         label="Password"
         placeholder="Enter your password"
-        message="At least 8 characters"
         value={password}
         onChange={handlePasswordChange}
-        // {/* TODO: validation */}
+        message={errors.password}
       />
       <FormButton onClick={handleSubmit}>Create account</FormButton>
     </form>
